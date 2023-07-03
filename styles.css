@@ -1,0 +1,66 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-image: url(./images/assortment-pieces-cake.jpg);
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(244, 221, 221, 0.646);
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 1.5rem;
+  color: black;
+  transition: transform 0.5s;
+  text-transform: capitalize;
+}
+
+li:hover {
+  transform: scale(1.1);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  body {
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    background: none;
+  }
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    text-align: start;
+    transition: font-weight 0.5s, transform 1s;
+  }
+
+  li:hover {
+    transform: scale(1);
+    font-weight: 600;
+  }
+}
